@@ -1,0 +1,241 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   E-Books - Ruang Coding
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <img src="../logo.jpg" alt="" width="50" height="50" class="rounded-full">
+            <div class="text-2xl font-bold">
+                MyBook
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+            </nav>
+            <!-- <div class="hidden md:flex items-center space-x-4">
+                <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button>
+            </div> -->
+            <button class="md:hidden text-white" id="menu-button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <nav class="flex flex-col space-y-4 px-4 py-2">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+                <!-- <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button> -->
+            </nav>
+        </div>
+    </header>
+  <main class="container mx-auto px-4 py-8">
+   <section class="text-center mb-12">
+    <h1 class="text-4xl font-bold mb-4">
+     E-Books Materi Kelas 12
+    </h1>
+    <p class="text-lg mb-4">
+     Tempat dimana teman-teman dapat belajar gratis dengan membaca e-book yang telah kami sediakan.
+    </p>
+   </section>
+   <section class="mb-12">
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Bahasa Indonesia</p>
+            <a href="https://drive.google.com/drive/folders/1SwTFaHXRPIwMppYNVj7-pqH8MZqo2ECg?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Bahasa Indonesia TL</p>
+            <a href="https://drive.google.com/drive/folders/16CMMD7RAvC60O4ui0__cpeJHAMZ_jqPP?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Pendidikan Pancasila</p>
+            <a href="https://drive.google.com/drive/folders/1NaNADrNvvdISKOWPlLlrQJ6R-H7mP9pW?usp=drive_linkk"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Matematika</p>
+            <a href="https://drive.google.com/drive/folders/16aUBMoUZLJi9BTmVFm_c-gWvgkJwe_5v?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Matematika TL</p>
+            <a href="https://drive.google.com/drive/folders/13TV5pttgC7--U5Ver9JFDsyL2D6Bbr6N?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Informatif</p>
+            <a href="https://drive.google.com/drive/folders/1k1p9Ok-uUgGa5UwJMYPMgdebf8GAATs3?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book PJOK</p>
+            <a href="https://drive.google.com/drive/folders/1Q2_PDtTVmUqRVAwCAjm5FYyYFhGWYlhE?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Bahasa Inggris</p>
+            <a href="https://drive.google.com/drive/folders/1wLrSgld-e94IudvQOKDALMrJMqffNyJ9?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Bahasa Inggris TL</p>
+            <a href="https://drive.google.com/drive/folders/1tjF0M4xumDwnyuTacoDGyjZykjxiC9s0?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Ekonomi</p>
+            <a href="https://drive.google.com/drive/folders/1ThpwgZRp5ZXeJXNLss2q44uGKHnaqExA?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Antropologi</p>
+            <a href="https://drive.google.com/drive/folders/1SQJeOOJbjwywO-UQnBhJw66is4oIF8Lw?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Geografi</p>
+            <a href="https://drive.google.com/drive/folders/1-7nkvQ7RxLBO4-IZGS6vG25XtJR15g4E?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Sejarah</p>
+            <a href="https://drive.google.com/drive/folders/18tSDfj6DE_IBX5Dg9G_xwOfyAGUzfG1m?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Sosiologi</p>
+            <a href="https://drive.google.com/drive/folders/1qJ64r6MkD47orkWvBtc3vD-cpZ-vFLDY?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Biologi</p>
+            <a href="https://drive.google.com/drive/folders/1r9MVS-Z7_dPU-TLaZzZgH2dwMRznO-TX?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Fisika</p>
+            <a href="https://drive.google.com/drive/folders/1dIhBvdMn5X9It6nYkblcvn_aWpZp-fME?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Kimia</p>
+            <a href="https://drive.google.com/drive/folders/12A3A99x8Rbqn0uWXq2awanDmyZs7OoGU?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Seni Budaya</p>
+            <a href="https://drive.google.com/drive/folders/1sjeFoA0fLXCVZACEemitRv3Yi-Zj8C1s?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Prakarya</p>
+            <a href="https://drive.google.com/drive/folders/19jA8NZ8cekzqmUclACoWVwSdTIycKZz_?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book PAI Islam</p>
+            <a href="https://drive.google.com/drive/folders/1zLeX_oIFGZWSYmZtZZ36FBwDMGpq2jrD?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gray-800 py-8">
+    <div class="container mx-auto px-4">
+     <div class="flex justify-between items-center">
+      <div class="text-2xl font-bold">
+       MyBook
+      </div>
+      <!-- <div class="space-x-4">
+       <a class="text-white" href="#">
+        Tutorial Programming
+       </a>
+       <a class="text-white" href="#">
+        Pembuatan Aplikasi &amp; Web
+       </a>
+       <a class="text-white" href="#">
+        Trik
+       </a>
+       <a class="text-white" href="#">
+        Youtube
+       </a>
+      </div> -->
+      <div class="space-x-4">
+       <a class="text-white" href="#">
+        Instagram
+       </a>
+       <a class="text-white" href="#">
+        Whatsapp
+       </a>
+      </div>
+     </div>
+    </div>
+   </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,217 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   E-Books - Ruang Coding
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <img src="../logo.jpg" alt="" width="50" height="50" class="rounded-full">
+            <div class="text-2xl font-bold">
+                MyBook
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+            </nav>
+            <!-- <div class="hidden md:flex items-center space-x-4">
+                <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button>
+            </div> -->
+            <button class="md:hidden text-white" id="menu-button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <nav class="flex flex-col space-y-4 px-4 py-2">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+                <!-- <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button> -->
+            </nav>
+        </div>
+    </header>
+  <main class="container mx-auto px-4 py-8">
+   <section class="text-center mb-12">
+    <h1 class="text-4xl font-bold mb-4">
+     E-Books Materi Kelas 10
+    </h1>
+    <p class="text-lg mb-4">
+     Tempat dimana teman-teman dapat belajar gratis dengan membaca e-book yang telah kami sediakan.
+    </p>
+   </section>
+   <section class="mb-12">
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Bahasa Indonesia</p>
+            <a href="https://drive.google.com/drive/folders/1pH1NL6mbUvSvtf2FkenwL_CMjM9KBL0N?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Pendidikan Pancasila</p>
+            <a href="https://drive.google.com/drive/folders/1LKQEENfqKlcsQRLPz-BRqaAdl4XiTZ1b?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Matematika</p>
+            <a href="https://drive.google.com/drive/folders/1R9luMyWJN7guwH5TGKgDNPDk4Icp3c2y?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Informatika</p>
+            <a href="https://drive.google.com/drive/folders/1ToSoYrdkjH_5YPvJSlLrVhnvnL433SY3?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book PJOK</p>
+            <a href="https://drive.google.com/drive/folders/19sfl28OLOdg8dgwaND_VZQcF92IOC0jS?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Bahasa Inggris</p>
+            <a href="https://drive.google.com/drive/folders/1VvsDpYKzXvhuDwcwQlbhcQn3E1Mskw-d?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book IPS (Ekonomi)</p>
+            <a href="https://drive.google.com/drive/folders/1oGRrCVCWGEoZEbL4XOfSXwJqD6C-rYq3?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book IPS (Geografi)</p>
+            <a href="https://drive.google.com/drive/folders/1QJmzSdyPoxe6uF7JAnhp48-qE-N9wKlZ?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book IPS (Sejarah)</p>
+            <a href="https://drive.google.com/drive/folders/1IP6u2FWr_Lv4STBExDcqeh_Gg-tCovSb?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book IPS (Sosiologi)</p>
+            <a href="https://drive.google.com/drive/folders/1tlwlLsX1-VLFeRV9YNWgODh0rn_zBLel?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book IPS (Biologi)</p>
+            <a href="https://drive.google.com/drive/folders/1AQCS_5UaQbmv6Y5VGlfrH0xVJGMRJOjK?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book IPS (Fisika)</p>
+            <a href="https://drive.google.com/drive/folders/1vgagFufYzzxwoiIePD35I7axxKWx_frl?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book IPS (Kimia)</p>
+            <a href="https://drive.google.com/drive/folders/1eLy2RUUqz6XgLxkuYaX9-mtnAxY5jbQ4?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Seni Budaya</p>
+            <a href="https://drive.google.com/drive/folders/1p_U0Xe6rg-pAPqqZYfE_L2lUNIe2NB2V?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book Prakarya</p>
+            <a href="https://drive.google.com/drive/folders/1wGIGmeQkaDCls3AfdiETiBlCF4OKm4Tj?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">E-book PAI Islam</p>
+            <a href="https://drive.google.com/drive/folders/165tng_ArckFMm9oo_Nkm7XHJHszN2qBK?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gray-800 py-8">
+    <div class="container mx-auto px-4">
+     <div class="flex justify-between items-center">
+      <div class="text-2xl font-bold">
+       MyBook
+      </div>
+      <!-- <div class="space-x-4">
+       <a class="text-white" href="#">
+        Tutorial Programming
+       </a>
+       <a class="text-white" href="#">
+        Pembuatan Aplikasi &amp; Web
+       </a>
+       <a class="text-white" href="#">
+        Trik
+       </a>
+       <a class="text-white" href="#">
+        Youtube
+       </a>
+      </div> -->
+      <div class="space-x-4">
+       <a class="text-white" href="#">
+        Instagram
+       </a>
+       <a class="text-white" href="#">
+        Whatsapp
+       </a>
+      </div>
+     </div>
+    </div>
+   </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    });
+  </script>
+ </body>
+</html>

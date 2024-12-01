@@ -1,0 +1,175 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+       MyBook
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <img src="../logo.jpg" alt="" width="50" height="50" class="rounded-full">
+            <div class="text-2xl font-bold">
+                MyBook
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+            </nav>
+            <!-- <div class="hidden md:flex items-center space-x-4">
+                <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button>
+            </div> -->
+            <button class="md:hidden text-white" id="menu-button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <nav class="flex flex-col space-y-4 px-4 py-2">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+                <!-- <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button> -->
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center mb-12 bg-cover bg-center py-20"
+            style="background-image: url('https://p1.pxfuel.com/preview/916/460/15/dark-gloomy-books-pages.jpg');">
+            <h1 class="lg:text-6xl text-4xl font-bold mb-4">
+                Kumpulan E-book &amp; Tutorial Pemograman.
+            </h1>
+            <p class="text-lg mb-4">
+                Tempat untuk belajar &amp; menemukan ilmu yang bermanfaat dalam sebuah E-book dan Video.
+            </p>
+            <button class="bg-blue-600 px-6 py-2 rounded">
+                Pelajari Sekarang
+            </button>
+        </section>
+        <section class="mb-12">
+            <h2 class="text-4xl font-bold mb-4 text-center">
+                Kategori E-book
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://itbox.id/wp-content/uploads/2023/01/perbedaan-programmer-dan-developer-1024x683.jpeg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Buku Programmer
+                    </h3>
+                    <a href="programmer.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 p-4 rounded">
+                    <img alt="Tutorial 2" class="mb-4 rounded" height="200"
+                        src="https://static.alinea.id/2019/11/20/56525/membaca-buku-membuat-pribadi-lebih-toleran-dan-bersimpati-9ufXfvYkkC.jpeg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Buku Umum
+                    </h3>
+                    <a href="umum.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <div class="bg-gray-800 p-4 rounded">
+                    <img alt="Tutorial 3" class="mb-4 rounded" height="200"
+                        src="https://media.karousell.com/media/photos/products/2023/2/1/buku_novel_random_9pcs_1675235044_1a538c76_progressive.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Buku Random
+                    </h3>
+                    <a href="random.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="text-center mt-4">
+                <a class="text-blue-600" href="#">
+                    Lihat Selengkapnya
+                </a>
+            </div> -->
+        </section>
+    </main>
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4">
+         <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold">
+           MyBook
+          </div>
+          <!-- <div class="space-x-4">
+           <a class="text-white" href="#">
+            Tutorial Programming
+           </a>
+           <a class="text-white" href="#">
+            Pembuatan Aplikasi &amp; Web
+           </a>
+           <a class="text-white" href="#">
+            Trik
+           </a>
+           <a class="text-white" href="#">
+            Youtube
+           </a>
+          </div> -->
+          <div class="space-x-4">
+           <a class="text-white" href="https://www.tiktok.com/@danzpakezklpakesdingin?_t=8rlq7EHdn1k&_r=1">
+            Tiktok
+           </a>
+           <a class="text-white" href="https://youtube.com/@wildan.farhany.r5829?si=27HtxrjY9Ym3ouTS">
+            Youtube
+           </a>
+          </div>
+         </div>
+        </div>
+       </footer>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mybook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <button id="loginBtn">Login</button>
+        </div>
+    </div>
+
+
+    <nav>
+        <img src="https://e7.pngegg.com/pngimages/59/635/png-clipart-digital-library-book-integrated-library-system-information-book-emblem-logo.jpg"
+            alt="Logo" style="height: 50px;"> <!-- Logo di sebelah kiri -->
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#E-Book">E-Book</a></li>
+            <li><a href="#Profile">Profile</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section id="Home">
+        <h1>Welcome to MyBook </h1>
+        <p>Your favorite books are just a click away!</p>
+    </section>
+
+
+    <section id="E-Book">
+        <h1>Daftar Buku</h1>
+        <!-- Kartu kategori -->
+        <div id="categoryCards" class="new-card-list">
+            <!-- Buku Programmer -->
+            <div class="book-category-card programmer" onclick="showBooks('programmer')">
+                <img src="https://via.placeholder.com/150" alt="Buku Programmer">
+                <h2>Buku Programmer</h2>
+                <p>Eksplorasi koleksi buku pemrograman terbaik.</p>
+                <button class="category-btn">Lihat Buku</button>
+            </div>
+
+            <!-- Buku Umum -->
+            <div class="book-category-card general" onclick="showBooks('general')">
+                <img src="https://via.placeholder.com/150" alt="Buku Umum">
+                <h2>Buku Umum</h2>
+                <p>Buku untuk kelas 10, 11, dan 12.</p>
+                <button class="category-btn">Lihat Buku</button>
+            </div>
+
+            <!-- Buku Random -->
+            <div class="book-category-card random" onclick="showBooks('random')">
+                <img src="https://via.placeholder.com/150" alt="Buku Random">
+                <h2>Buku Random</h2>
+                <p>Kumpulan buku dengan tema campuran.</p>
+                <button class="category-btn">Lihat Buku</button>
+            </div>
+        </div>
+
+        <!-- Daftar buku (disembunyikan saat awal) -->
+        <div id="bookSection" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Cari buku..."
+                style="margin-bottom: 20px; padding: 10px; width: 80%; border-radius: 5px; border: 1px solid #ddd;">
+            <div class="book-list">
+                <!-- Buku Programmer (contoh) -->
+
+                <!-- book1 -->
+                <div class="book-card" data-book="book1" data-category="programmer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png"
+                        alt="Book 1">
+                    <p>HTML</p>
+                    <button class="review-btn" data-book="book1">Review Book</button>
+                </div>
+                <!-- book2 -->
+                <div class="book-card" data-book="book2" data-category="programmer">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/001/416/680/small/css3-emblem-blue-shield-and-white-text-vector.jpg"
+                        alt="Book 2">
+                    <p>CSS</p>
+                    <button class="review-btn" data-book="book2">Review Book</button>
+                </div>
+                <!-- book3 -->
+                <div class="book-card" data-book="book3" data-category="programmer">
+                    <img src="https://www.freepnglogos.com/uploads/javascript-png/png-javascript-badge-picture-8.png"
+                        alt="Book 3">
+                    <p>JavaScript</p>
+                    <button class="review-btn" data-book="book3">Review Book</button>
+                </div>
+                <!-- book4 -->
+                <div class="book-card" data-book="book4" data-category="programmer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLjQzgZFoWbRKUsJaIk8JImteIIUVWS2ijaQNtfrjrw4lnOMcERvpW619Vp4sfKUkqsj4&usqp=CAU"
+                        alt="Book 4">
+                    <p>Java</p>
+                    <button class="review-btn" data-book="book4">Review Book</button>
+                </div>
+                <!-- book5 -->
+                <div class="book-card" data-book="book5" data-category="programmer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1024px-PHP-logo.svg.png"
+                        alt="Book 5">
+                    <p>PHP</p>
+                    <button class="review-btn" data-book="book5">Review Book</button>
+                </div>
+                <!-- book6 -->
+                <div class="book-card" data-book="book6" data-category="programmer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png"
+                        alt="Book 6">
+                    <p>C++</p>
+                    <button class="review-btn" data-book="book6">Review Book</button>
+                </div>
+                <!-- book7 -->
+                <div class="book-card" data-book="book7" data-category="programmer">
+                    <img src="https://www.santekno.com/images/c-logo.png" alt="Book 7">
+                    <p>C</p>
+                    <button class="review-btn" data-book="book7">Review Book</button>
+                </div>
+                <!-- book8 -->
+                <div class="book-card" data-book="book8" data-category="programmer">
+                    <img src="https://cdn1-production-assets-kly.akamaized.net/medias/686810/big/android-logo-png.png?t=1454254937"
+                        alt="Book 8">
+                    <p>Android</p>
+                    <button class="review-btn" data-book="book8">Review Book</button>
+                </div>
+                <!-- book9 -->
+                <div class="book-card" data-book="book9" data-category="programmer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg" alt="Book 9">
+                    <p>Arduino</p>
+                    <button class="review-btn" data-book="book9">Review Book</button>
+                </div>
+                <!-- book10 -->
+                <div class="book-card" data-book="book10" data-category="programmer">
+                    <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2017/05/19/591e9c72b5e1b-logo-linux_1265_711.jpg"
+                        alt="Book 10">
+                    <p>Linux</p>
+                    <button class="review-btn" data-book="book10">Review Book</button>
+                </div>
+                <!-- book11 -->
+                <div class="book-card" data-book="book11" data-category="programmer">
+                    <img src="https://inceptivetechnologies.com/wp-content/uploads/2022/03/swift.png" alt="Book 11">
+                    <p>Swift</p>
+                    <button class="review-btn" data-book="book11">Review Book</button>
+                </div>
+                <!-- book12 -->
+                <div class="book-card" data-book="book12" data-category="programmer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4zUsSxnQTdt0fJIoZ0RQFyGSz6wbWKpAgIA&s"
+                        alt="Book 12">
+                    <p>Ruby</p>
+                    <button class="review-btn" data-book="book12">Review Book</button>
+                </div>
+                <!-- book13 -->
+                <div class="book-card" data-book="book13" data-category="programmer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA4O9vVj9yvXs7ByFTrDBodfF9NuXtXfO-Ag&s"
+                        alt="Book 13">
+                    <p>Python</p>
+                    <button class="review-btn" data-book="book13">Review Book</button>
+                </div>
+                <!-- book14 -->
+                <div class="book-card" data-book="book14" data-category="programmer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1EGeTLBMMkL_CYR16CllAVUOvRepMJKtUzQdkl99IlvdZyYAMR9CS6pDGFzmY81ijZ9c&usqp=CAU"
+                        alt="Book 14">
+                    <p>MySQL</p>
+                    <button class="review-btn" data-book="book14">Review Book</button>
+                </div>
+                <!-- book15 -->
+                <div class="book-card" data-book="book15" data-category="programmer">
+                    <img src="https://seeklogo.com/images/M/microsoft-logo-8EE94BD68A-seeklogo.com.png" alt="Book 15">
+                    <p>Microsoft</p>
+                    <button class="review-btn" data-book="book15">Review Book</button>
+                </div>
+                <!-- book16 -->
+                <div class="book-card" data-book="book16" data-category="programmer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJIZSV6WytXnbqL37Z7iDhoi8kwsxPd28QQw&s"
+                        alt="Book 16">
+                    <p>Laravel</p>
+                    <button class="review-btn" data-book="book16">Review Book</button>
+                </div>
+                <!-- book17 -->
+                <div class="book-card" data-book="book17" data-category="programmer">
+                    <img src="https://i1.wp.com/himti.budiluhur.ac.id/wp-content/uploads/2019/10/calculus.jpg?resize=1024%2C640"
+                        alt="Book 17">
+                    <p>Kalkulus</p>
+                    <button class="review-btn" data-book="book17">Review Book</button>
+                </div>
+                <!-- book18 -->
+                <div class="book-card" data-book="book18" data-category="programmer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="Book 18">
+                    <p>C#</p>
+                    <button class="review-btn" data-book="book18">Review Book</button>
+                </div>
+                <!-- book19 -->
+                <div class="book-card" data-book="book19" data-category="programmer">
+                    <img src="https://cdn.dribbble.com/users/1261007/screenshots/6557375/server.png?resize=400x0"
+                        alt="Book 19">
+                    <p>Server</p>
+                    <button class="review-btn" data-book="book19">Review Book</button>
+                </div>
+                <!-- book20 -->
+                <div class="book-card" data-book="book20" data-category="programmer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7fkRF057eqXYTsGCOBPGzwECVdD1ObYyQrrMaRRPkYEl_9wOOi2Q6wSnQ3lMgxeT2Ec&usqp=CAU"
+                        alt="Book 20">
+                    <p>Keamanan Cyber Security</p>
+                    <button class="review-btn" data-book="book20">Review Book</button>
+                </div>
+                <!-- book21 -->
+                <div class="book-card" data-book="book21" data-category="programmer">
+                    <img src="https://static.vecteezy.com/system/resources/previews/021/496/368/non_2x/ios-icon-logo-software-phone-apple-symbol-with-name-black-design-mobile-illustration-free-vector.jpg"
+                        alt="Book 21">
+                    <p>IOS</p>
+                    <button class="review-btn" data-book="book21">Review Book</button>
+                </div>
+                <!-- book22 -->
+                <div class="book-card" data-book="book22" data-category="programmer">
+                    <img src="https://lh3.googleusercontent.com/proxy/LTSs5vzhIMxyOEyQGH2fv2y3vwWtjOXdZF5PzElmwbVo9oiO-dw1UXMdnhVP1LFJ5u38x1nRDJkuAE6IuR8riiqgKXg9eF2oU9GQfMczloE1PbAqOI1HCGzJ1q29_Q"
+                        alt="Book 22">
+                    <p>Mikrotik</p>
+                    <button class="review-btn" data-book="book22">Review Book</button>
+                </div>
+                <!-- book23 -->
+                <div class="book-card" data-book="book23" data-category="programmer">
+                    <img src="https://via.placeholder.com/100" alt="Book 2">
+                    <p>Book 2</p>
+                    <button class="review-btn" data-book="book2">Review Book</button>
+                </div>
+            </div>
+            <button onclick="goBackToCategories()" class="back-btn">Kembali ke Kategori</button>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="reviewSection" class="hidden">
+        <h1>Review Buku</h1>
+        <div class="review-list">
+            <!-- html -->
+            <div class="review-card" data-book="book1">
+                <img src="https://books.google.co.id/books/publisher/content?id=kuz4DwAAQBAJ&hl=id&pg=PP1&img=1&zoom=3&sig=ACfU3U1wIUyr27vg5t51k14L_i91J1Slew&w=1280
+                " alt="Gambar dari Google Drive">
+                <p>Pemrograman-Web-Dasar-I-Belajar-HTML-5</p>
+                <a href="https://drive.google.com/file/d/1JsH70mMh7zINfwsX6MItaEDGQUor-k13/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/YpqPS3z/Modul-Dasar-HTML1.jpg
+                " alt="Gambar dari Google Drive">
+                <p>Modul Dasar HTML</p>
+                <a href="https://drive.google.com/file/d/1IcIm0tKOho0TjsWF3Dnpx93EF5MNKrpt/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/zXgfRHB/Mastering-kode-html.jpg
+                " alt="Gambar dari Google Drive">
+                <p>mastering-kode-html-full</p>
+                <a href="https://drive.google.com/file/d/1tpQpmMtJ-LCaHTklrKa8vNK_sxNaZyeR/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/BZxcSbf/JUMP-START-HTML5.jpg
+                " alt="Gambar dari Google Drive">
+                <p>JUMP START HTML5</p>
+                <a href="https://drive.google.com/file/d/1t8Bn00PDocbVcxgVB8-WqfLv3HP6cHMI/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/zRDZSW2/HTML5-Pemograman-Web-Dasar.jpg
+                " alt="Gambar dari Google Drive">
+                <p>HTML5-PemrogramanWebDasar-Final</p>
+                <a href="https://drive.google.com/file/d/1vOpnOlM1b5T68l5SEY-xX4w2RkAMV_Yc/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/C6ZGQKg/HTML5-CSS3-FOR-THE-REAL.jpg
+                " alt="Gambar dari Google Drive">
+                <p>HTML5 & CSS3 FOR THE REAL WORLD</p>
+                <a href="https://drive.google.com/file/d/15t5-Y7SbrFqZgFt_UxXkgQ5-BaRnaHcx/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/ZTVwt8h/HTML-CSS-Bootstrap-Java-Script.jpg
+                " alt="Gambar dari Google Drive">
+                <p>HTML, CSS, Bootstrap, JavaScript and jQuery </p>
+                <a href="https://drive.google.com/file/d/1xVTAw55_sW6SKiyeCH3nshlw_CKmOh7W/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/nD3kD9W/html-cheat-sheet.jpg
+                " alt="Gambar dari Google Drive">
+                <p>html-cheat-sheet</p>
+                <a href="https://drive.google.com/file/d/1HMsDFGjLQb7AtW3oOod2GyWsoJhLEotD/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/HgHK6cq/HTML-Dasar.jpg
+                " alt="Gambar dari Google Drive">
+                <p>HTML Dasar</p>
+                <a href="https://drive.google.com/file/d/1I1B_sB1eCFS-jthx434QeLK_K1tP6Hh5/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/wpcLkhr/Complete-HTML-Cheatsheet.jpg
+                " alt="Gambar dari Google Drive">
+                <p>Complete HTML Cheatsheet📝</p>
+                <a href="https://drive.google.com/file/d/1rwBajdICL2rxv9jSUZL6QHZXHaQ9r5q0/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/qMdXBzM/Belajar-HTML-Dasar-Pengertian-HTML.jpg
+                " alt="Gambar dari Google Drive">
+                <p>Belajar HTML Dasar Pengertian HTML v2</p>
+                <a href="https://drive.google.com/file/d/1vvMQcjgpJ_p0MLWfv6iopUMpvpc42nnS/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/syJt1dw/modul-1-html-dan-css.jpg
+                " alt="Gambar dari Google Drive">
+                <p>adoc.pub_modul-1-html-dan-css</p>
+                <a href="https://drive.google.com/file/d/1QlgKhknuDmIwW0F4CwnzUx0nh__phzfH/view?usp=drive_link"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/hV8g7RQ/modul-1-dasar-dasar-html.jpg
+                " alt="Gambar dari Google Drive">
+                <p>adoc.pub_modul-1-dasar-dasar-html</p>
+                <a href="https://drive.google.com/file/d/1hxcsEKOj_obqUR0ChGIqNC2-MoNugeef/view?usp=drive_link"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book1">
+                <img src="https://i.ibb.co.com/v1Kg14K/1-pengenalan-html-2-tag.jpg
+                " alt="Gambar dari Google Drive">
+                <p>adoc.pub_1-pengenalan-html-2-tag-dasar-html</p>
+                <a href="https://drive.google.com/file/d/1JOvwOXbW5sfYOoxhdDRR2kPL3i8GpYbN/view?usp=drive_link"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- css -->
+            <div class="review-card" data-book="book2">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Book 2">
+                <p>PANDUAN HTML CSS CYBERSTUDY</p>
+                <a href="https://drive.google.com/file/d/11vkP2lDgrJhniEjOuIFxooH8mALBE8ET/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Book 2">
+                <p>Modul Desain Web CSS</p>
+                <a href="https://drive.google.com/file/d/1PLu2988a43aFR1CiPpm2kvc6u3Uwe1ri/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Book 2">
+                <p>css_cheat_sheet</p>
+                <a href="https://drive.google.com/file/d/1VmSH7lIVbLa9ZdYeju_5U-OZvFZh1nGw/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Book 2">
+                <p>5. EBOOK CSS_5</p>
+                <a href="https://drive.google.com/file/d/10Z3pT_vDDAox1IhpzKhREPW1So_sRU23/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Book 2">
+                <p>4. EBOOK CSS_ABE</p>
+                <a href="https://drive.google.com/file/d/1GEJZ7rgZwvTUhCJV9F63pRFc2XWpVdsZ/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Book 2">
+                <p>3. EBOOK CSS_ROSA_ARIANI</p>
+                <a href="https://drive.google.com/file/d/1A6BK1zD-6Z-WOsbOPLTNIkuNSaqTUwBv/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Book 2">
+                <p>2. EBOOK CSS_ROSIHAN</p>
+                <a href="https://drive.google.com/file/d/1labrvvXipLH4wN6VzwdQLnSf-ygxAc-X/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://i.ibb.co.com/vzyvpxx/Cover-dan-Draft-Buku-Ajar-Web-Program.jpg"
+                    alt="Review 2 untuk Book 2">
+                <p>Cover-dan-Draft-Buku-Ajar-Web-programming-desain-halaman-web-dengan-CSS</p>
+                <a href="https://drive.google.com/file/d/1iuMVQCMBr-jGkwNpyXGmADxW65Ge62lq/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://drive.google.com/file/d/11vkP2lDgrJhniEjOuIFxooH8mALBE8ET/view?usp=sharing"
+                    alt="Review 2 untuk Book 2">
+                <p>Modul-02-CSS</p>
+                <a href="https://drive.google.com/file/d/1mIn4HF9oQWj8z8AOzj_ZHCPXNUnJyM1u/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://drive.google.com/file/d/11vkP2lDgrJhniEjOuIFxooH8mALBE8ET/view?usp=sharing"
+                    alt="Review 2 untuk Book 2">
+                <p>FED-CSS</p>
+                <a href="https://drive.google.com/file/d/1EKDCGFifXLwKPiJDBLMeB6CbEVlTLZ0_/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book2">
+                <img src="https://drive.google.com/file/d/11vkP2lDgrJhniEjOuIFxooH8mALBE8ET/view?usp=sharing"
+                    alt="Review 2 untuk Book 2">
+                <p>CSS Notes For Professionals</p>
+                <a href="https://drive.google.com/file/d/1zC9yiiRdxoRUaJBTOAYmTQRF9dNa-jZd/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- js -->
+            <div class="review-card" data-book="book3">
+                <img src="https://via.placeholder.com/150" alt="Review 3 untuk Book 3">
+                <p>Review 3 untuk Book 3</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- java -->
+            <div class="review-card" data-book="book4">
+                <img src="https://via.placeholder.com/150" alt="Review 4 untuk Book 4">
+                <p>Review 4 untuk Book 4</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- php -->
+            <div class="review-card" data-book="book5">
+                <img src="https://via.placeholder.com/150" alt="Review 5 untuk Book 5">
+                <p>Review 5 untuk Book 5</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- c++ -->
+            <div class="review-card" data-book="book6">
+                <img src="https://via.placeholder.com/150" alt="Review 6 untuk Book 6">
+                <p>Review 6 untuk Book 6</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- c -->
+            <div class="review-card" data-book="book7">
+                <img src="https://via.placeholder.com/150" alt="Review 7 untuk Book 7">
+                <p>Review 7 untuk Book 7</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- android -->
+            <div class="review-card" data-book="book8">
+                <img src="https://via.placeholder.com/150" alt="Review 8 untuk Book 8">
+                <p>Review 8 untuk Book 8</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- arduino -->
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/bWpFy1Q/Android-Blueprint.jpg" alt="Review 9 untuk Book 9">
+                <p>Android-Blueprint</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/QQGZ48M/Arduino-Development.jpg" alt="Review 9 untuk Book 9">
+                <p>Arduino-Development</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/Y3FBVJt/Arduino-Workshop.jpg" alt="Review 9 untuk Book 9">
+                <p>Arduino-Workshop</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/rf1CvHs/Head-First-Android-Development.jpg" alt="Review 9 untuk Book 9">
+                <p>Head-First-Android-Development</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/0DnBmny/Home-Security.jpg" alt="Review 9 untuk Book 9">
+                <p>Home-Security</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/MsJnYqS/HUMAIDILAH-Buku-Modul-Arduino-Uno.jpg"
+                    alt="Review 9 untuk Book 9">
+                <p>HUMAIDILAH-Buku-Modul-Arduino-Uno</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/nsqZPGQ/Internet-of-Things-with-the-Arduino.jpg"
+                    alt="Review 9 untuk Book 9">
+                <p>Internet-of-Things-with-the-Arduino</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/xDqKft7/Panduan-Belajar-Arduino-Untuk-Pemula-Kelas-Robot.jpg"
+                    alt="Review 9 untuk Book 9">
+                <p>Panduan-Belajar-Arduino-Untuk-Pemula-Kelas-Robot</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book9">
+                <img src="https://i.ibb.co.com/z4Vkky0/Programming-Arduino-with-Lab-View.jpg"
+                    alt="Review 9 untuk Book 9">
+                <p>Programming-Arduino-with-Lab-View</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- linux -->
+            <div class="review-card" data-book="book10">
+                <img src="https://i.ibb.co.com/4NZvD4k/linux-dasar-singel.jpg" alt="Review 10 untuk Book 10">
+                <p>linux-dasar-single</p>
+                <a href="https://drive.google.com/file/d/1NHry6zijfCwfL5C5eaYRcZPPNQ19klu5/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book10">
+                <img src="https://i.ibb.co.com/sQ2jRzJ/Linux-Server-Dev-Ops-Cloud-Computing.jpg"
+                    alt="Review 10 untuk Book 10">
+                <p>Linux Server, DevOps, Cloud Computing</p>
+                <a href="https://drive.google.com/file/d/1KRZLpi8cCIZQH9Ew2-RbvVJdBOAL8r8l/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book10">
+                <img src="https://i.ibb.co.com/kXMMzW1/Hacker-dengan-Linux.jpg" alt="Review 10 untuk Book 10">
+                <p>Hacker dengan Linux</p>
+                <a href="https://drive.google.com/file/d/1xFvrs4MF9cvGp5HUy9C5gsvl7mxSXzcR/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book10">
+                <img src="https://i.ibb.co.com/PwHtc4h/Linux-all-In-One.jpg" alt="Review 10 untuk Book 10">
+                <p>Linux-all-In-One</p>
+                <a href="." class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book10">
+                <img src="https://i.ibb.co.com/VCTdtJV/Linux-Notes-For-Profs.jpg" alt="Review 10 untuk Book 10">
+                <p>Linux-Notes-For-Profs</p>
+                <a href="." class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book10">
+                <img src="https://i.ibb.co.com/DKsYRXS/The-Ubuntu-Book.jpg" alt="Review 10 untuk Book 10">
+                <p>The-Ubuntu-Book</p>
+                <a href="." class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- swift -->
+            <div class="review-card" data-book="book11">
+                <img src="https://i.ibb.co.com/YZj6BsV/Learn-Swift.jpg" alt="Review 11 untuk Book 11">
+                <p>Learn-Swift</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book11">
+                <img src="https://i.ibb.co.com/k61kqvK/Swift-For-Beginners.jpg" alt="Review 11 untuk Book 11">
+                <p>Swift-For-Beginners</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book11">
+                <img src="https://i.ibb.co.com/4P75G7x/Swift-Notes-For-Profs.jpg" alt="Review 11 untuk Book 11">
+                <p>Swift-Notes-For-Profs</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- ruby -->
+            <div class="review-card" data-book="book12">
+                <img src="https://i.ibb.co.com/TPCfV5N/Learn-Ruby.jpg" alt="Review 12 untuk Book 12">
+                <p>Learn-Ruby</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book12">
+                <img src="https://i.ibb.co.com/jrm9mm7/Ruby-Note-for-prof.jpg" alt="Review 12 untuk Book 12">
+                <p>Ruby-Note-for-prof</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book12">
+                <img src="https://i.ibb.co.com/MgQVKVx/Ruby-Programming.jpg" alt="Review 12 untuk Book 12">
+                <p>Ruby-Programming</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- phyton -->
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/R4ZxkXw/Tutorial-pemograman-python-2-untuk-pemograman.jpg"
+                    alt="Review 13 untuk Book 13">
+                <p>Tutorial_Pemrograman_Python_2_Untuk_Pemula</p>
+                <a href="https://drive.google.com/file/d/1hS_1DsATVUFrg4pZvYkykuqcLZR7eYlz/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://via.placeholder.com/150" alt="Review 13 untuk Book 13">
+                <p>python-Indonsesia</p>
+                <a href="https://drive.google.com/file/d/1dkU0_q8wyKfMW3P33fdNqNuvE0lbn7kb/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/GJL4vX9/Python-for-dummies.jpg" alt="Review 13 untuk Book 13">
+                <p>python-for-dummies</p>
+                <a href="https://drive.google.com/file/d/1fPVbvTqvyLxPlrUYounaoAndiRNyT8-a/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/4Zc0kZB/Python-black-hat.jpg" alt="Review 13 untuk Book 13">
+                <p>python black hat</p>
+                <a href="https://drive.google.com/file/d/1Ce8uJnyjeVbOf7KD0mjnVfmS8ILZ3Cvg/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/tDRGfrq/PYTHON-BASICS.jpg" alt="Review 13 untuk Book 13">
+                <p>PYTHON BASICS</p>
+                <a href="https://drive.google.com/file/d/1-7Wplzl2PWbwEUtzUDsh_eibnqq_mcQA/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/W5R1TGz/Pemograman-Python-Dasar.jpg" alt="Review 13 untuk Book 13">
+                <p>Pemrograman Python Dasar</p>
+                <a href="https://drive.google.com/file/d/11pAY5V_RHfch5Z7KpJyLEuIJ2k7h1kSA/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://via.placeholder.com/150" alt="Review 13 untuk Book 13">
+                <p>MODUL PYTHON 1-6(1)</p>
+                <a href="https://drive.google.com/file/d/16T2JuCAgMHyPBdAtHuSmqR4Q_SBIWvKs/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://via.placeholder.com/150" alt="Review 13 untuk Book 13">
+                <p>MODUL PYTHON 1-6</p>
+                <a href="https://drive.google.com/file/d/1BopYSRXNZZIAxEPxgLmRZaRvoCEG18SV/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/5WpWkwm/Kriptografi-dan-Python.jpg" alt="Review 13 untuk Book 13">
+                <p>Kriptografi_dan_Python.pdf</p>
+                <a href="https://drive.google.com/file/d/1aEttK3Fg_AXjbCPZutkSzdccdO7fyaFt/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://via.placeholder.com/150" alt="Review 13 untuk Book 13">
+                <p>E-Book_Belajar_Pemrograman_Python_Dasar</p>
+                <a href="https://drive.google.com/file/d/1LAHaqXkFwwO-Eg4orAThbOKXIk4aXQsB/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/ypD8PPH/bukupython-1.jpg" alt="Review 13 untuk Book 13">
+                <p>bukupython</p>
+                <a href="https://drive.google.com/file/d/1OGIHwehPbCbDl37_7UGjGj5fZoJes5Co/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/yy0hZRN/Buku-python.jpg" alt="Review 13 untuk Book 13">
+                <p>buku python</p>
+                <a href="https://drive.google.com/file/d/1DKOHKdz_F55d3n1d38XS42-CHAtTYNNi/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book13">
+                <img src="https://i.ibb.co.com/gR2hhFs/Belajar-Python.jpg" alt="Review 13 untuk Book 13">
+                <p>Belajar_Python</p>
+                <a href="https://drive.google.com/file/d/1o8nxUx4CwUA_r4xBFCPCGY20zWPVCFG_/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- mysql -->
+            <div class="review-card" data-book="book14">
+                <img src="https://i.ibb.co.com/DzLSM9n/MYSQLNotes-For-Professionals.jpg" alt="Review 14 untuk Book 14">
+                <p>MySQLNotesForProfessionals</p>
+                <a href="https://drive.google.com/file/d/1ljcJD1P2Lu3uzJMuxRDOvUY789G4ReFQ/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book14">
+                <img src="https://i.ibb.co.com/mb7SCLB/Modul-Pembelajaran-Aplikasi-Basis-Data.jpg"
+                    alt="Review 14 untuk Book 14">
+                <p>Modul-Pembelajaran-Aplikasi-Basis-Data-SQL</p>
+                <a href="https://drive.google.com/file/d/1vgK24U1v0P9ycTfuCVTmctbrv2Tk8UoF/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book14">
+                <img src="https://i.ibb.co.com/m6NfmN9/Belajar-Query-SQL-dasar.jpg" alt="Review 14 untuk Book 14">
+                <p>Belajar Query SQL Dasar</p>
+                <a href="https://drive.google.com/file/d/1x-C2BT8UIi8RkSYmRW36qHHJ7T4v8Sya/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- microsf -->
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/JBcJc0Z/Microsoft-Access-2013-Step-by-Step.jpg"
+                    alt="Review 15 untuk Book 15">
+                <p>Microsoft-Access-2013-Step-by-Step</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/ZxXQCHw/Microsoft-Excel-2016-Step-by-step.jpg"
+                    alt="Review 15 untuk Book 15">
+                <p>Microsoft-Excel-2016-Step-by-step</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/Fn7SgTT/Microsoft-One-Note-Step-by-Step.jpg"
+                    alt="Review 15 untuk Book 15">
+                <p>Microsoft-One-Note-Step-by-Step</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/0BhkKj0/Microsoft-Outlook-2013-Step-by-Step.jpg"
+                    alt="Review 15 untuk Book 15">
+                <p>Microsoft-Outlook-2013-Step-by-Step</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/svfxBQg/Microsoft-Power-Point-2016.jpg" alt="Review 15 untuk Book 15">
+                <p>Microsoft-Power-Point-2016</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/x7j29VN/Microsoft-Share-Point2016-Step-by-Step.jpg"
+                    alt="Review 15 untuk Book 15">
+                <p>Microsoft-Share-Point2016-Step-by-Step</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/0mypHPm/Microsoft-Word-2010-Step-by-Step.jpg"
+                    alt="Review 15 untuk Book 15">
+                <p>Microsoft-Word-2010-Step-by-Step</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book15">
+                <img src="https://i.ibb.co.com/x1zthqM/Word-2016-For-Professionals-For.jpg"
+                    alt="Review 15 untuk Book 15">
+                <p>Word-2016-For-Professionals-For</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- laravel -->
+            <div class="review-card" data-book="book16">
+                <img src="https://via.placeholder.com/150" alt="Review 16 untuk Book 16">
+                <p>Review 16 untuk Book 16</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- kalkulus -->
+            <div class="review-card" data-book="book17">
+                <img src="https://via.placeholder.com/150" alt="Review 17 untuk Book 17">
+                <p>Kalkulus Diferensial dilengkapi Tutorial MATLAB_v.2.0_Unesco</p>
+                <a href="https://drive.google.com/file/d/15wA7YM1nu1EaX8QwLTk-2NsEchkInDKt/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- c# -->
+            <div class="review-card" data-book="book18">
+                <img src="https://via.placeholder.com/150" alt="Review 18 untuk Book 18">
+                <p>Review 18 untuk Book 18</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <!-- Server -->
+            <div class="review-card" data-book="book19">
+                <img src="https://via.placeholder.com/150" alt="Review 19 untuk Book 19">
+                <p>Review 19 untuk Book 19</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!-- cyber -->
+            <div class="review-card" data-book="book20">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk Keamanan Cyber Security">
+                <p>Review 2 untuk Keamanan Cyber Security</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book20">
+                <img src="https://via.placeholder.com/150" alt="Review 20 untuk Keamanan Cyber Security">
+                <p>Review 20 untuk Keamanan Cyber Security</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!--  ios -->
+            <div class="review-card" data-book="book21">
+                <img src="https://via.placeholder.com/150" alt="Review 1 untuk iOS">
+                <p>Review 1 untuk iOS</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book21">
+                <img src="https://via.placeholder.com/150" alt="Review 2 untuk iOS">
+                <p>Review 2 untuk iOS</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book21">
+                <img src="https://via.placeholder.com/150" alt="Review 20 untuk iOS">
+                <p>Review 20 untuk iOS</p>
+                <a href="#" class="open-btn" target="_blank">Open File</a>
+            </div>
+
+            <!--  mickrtic -->
+            <div class="review-card" data-book="book22">
+                <img src="https://i.ibb.co.com/sgfYcHj/Modul-Konfigurasi-Dasar-Mikrotik.jpg"
+                    alt="Review 1 untuk Mikrotik">
+                <p>Modul Konfigurasi Dasar Mikrotik</p>
+                <a href="https://drive.google.com/file/d/1gYsrqa86kl99iZI-dX8IshOHsFA8R0nv/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+            <div class="review-card" data-book="book22">
+                <img src="https://i.ibb.co.com/5hXq6Jk/E-Book-Jago-Mikrotik.jpg" alt="Review 2 untuk Mikrotik">
+                <p>E-Book Jago Mikrotik-PIT</p>
+                <a href="https://drive.google.com/file/d/1Lj328_WsOdubslmLi71GD0nlQZK5pZnT/view?usp=sharing"
+                    class="open-btn" target="_blank">Open File</a>
+            </div>
+
+        </div>
+        <!-- Tombol Kembali ke Buku -->
+        <button class="back-btn">Kembali ke Buku</button>
+    </section>
+
+    <section id="Profile">
+        <h1>Profil Saya</h1>
+        <div class="profile-container">
+            <input type="file" id="uploadProfilePic" style="display: none;">
+            <button id="editPicBtn">Edit Foto Profil</button>
+            <button id="logoutBtn">Logout</button>
+            <div class="profile-picture-wrapper">
+                <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-picture">
+            </div>
+            <div class="profile-details">
+                <p style="margin-left: 20px;">Nama: <span id="name">Nama Anda</span></p>
+                <p style="margin-left: 20px;" id="description">Deskripsi Anda akan tampil di sini.</p>
+                <button id="editDescBtn">Edit Deskripsi</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

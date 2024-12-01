@@ -1,0 +1,444 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>
+    E-Books - Webify
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+  <header class="bg-gray-800 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <img src="../logo.jpg" alt="" width="50" height="50" class="rounded-full">
+        <div class="text-2xl font-bold">
+            MyBook
+        </div>
+        <nav class="hidden md:flex space-x-8">
+            <a class="text-white" href="../index.html">
+                Home
+            </a>
+            <a class="text-white" href="../tutorial.html">
+                Tutorial
+            </a>
+            <a class="text-white" href="../profile.html">
+                Profile
+            </a>
+        </nav>
+        <!-- <div class="hidden md:flex items-center space-x-4">
+            <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+            <button class="bg-blue-600 px-4 py-2 rounded">
+                Login
+            </button>
+        </div> -->
+        <button class="md:hidden text-white" id="menu-button">
+            <i class="fas fa-bars">
+            </i>
+        </button>
+    </div>
+    <div class="md:hidden" id="mobile-menu" style="display: none;">
+        <nav class="flex flex-col space-y-4 px-4 py-2">
+            <a class="text-white" href="../index.html">
+                Home
+            </a>
+            <a class="text-white" href="../tutorial.html">
+                Tutorial
+            </a>
+            <a class="text-white" href="../profile.html">
+                Profile
+            </a>
+            <!-- <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+            <button class="bg-blue-600 px-4 py-2 rounded">
+                Login
+            </button> -->
+        </nav>
+    </div>
+</header>
+  <main class="container mx-auto px-4 py-8">
+    <section class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">
+        Kumpulan E-book Programmer
+      </h1>
+      <p class="text-lg mb-4">
+        Tempat dimana teman-teman dapat belajar gratis dengan membaca e-book yang telah kami sediakan.
+      </p>
+    </section>
+    <section class="mb-12">
+      <!-- book html -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 1" class="mb-4 rounded"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            HTML
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi HTML
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/html.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book css -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 2" class="mb-4 rounded"
+            src="https://static.vecteezy.com/system/resources/thumbnails/001/416/680/small/css3-emblem-blue-shield-and-white-text-vector.jpg"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            CSS
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi CSS
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/css.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book javascript -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 3" class="mb-4 rounded"
+            src="https://www.freepnglogos.com/uploads/javascript-png/png-javascript-badge-picture-8.png" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            JAVASCRIPT
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi JAVASCRIPT
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/js.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book java -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 4" class="mb-4 rounded"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLjQzgZFoWbRKUsJaIk8JImteIIUVWS2ijaQNtfrjrw4lnOMcERvpW619Vp4sfKUkqsj4&usqp=CAU"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            JAVA
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi JAVA.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/java.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book php -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 5" class="mb-4 rounded"
+            src="https://cdn.freebiesupply.com/logos/large/2x/php-logo-png-transparent.png" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            PHP
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi PHP.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/php.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book c++ -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 6" class="mb-4 rounded"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            C++
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi C++.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/c++.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book c -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 7" class="mb-4 rounded" src="https://www.santekno.com/images/c-logo.png" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            C
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi C.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/c.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book Android -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 8" class="mb-4 rounded" src="https://techterms.com/img/lg/android_841.png" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            Android
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi Android.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/android.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book arduino -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 9" class="mb-4 rounded"
+            src="https://www.elegoo.com/cdn/shop/articles/arduino-ide-for-linux-windows-mac-616793.jpg?v=1616948301"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            Arduino
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi Arduino.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/arduino.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book linux -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://thumb.viva.co.id/media/frontend/thumbs3/2017/05/19/591e9c72b5e1b-logo-linux_1265_711.jpg"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            LINUX
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi LINUX.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/linux.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book swift -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://inceptivetechnologies.com/wp-content/uploads/2022/03/swift.png" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            SWIFT
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi SWIFT.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/swift.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book ruby -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4zUsSxnQTdt0fJIoZ0RQFyGSz6wbWKpAgIA&s"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            RUBY
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi RUBY.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/ruby.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book python -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA4O9vVj9yvXs7ByFTrDBodfF9NuXtXfO-Ag&s"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            PYTHON
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi PYTHON.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/python.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book mysql -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1EGeTLBMMkL_CYR16CllAVUOvRepMJKtUzQdkl99IlvdZyYAMR9CS6pDGFzmY81ijZ9c&usqp=CAU"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            MYSQL
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi MYSQL.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/mysql.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book ms -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://seeklogo.com/images/M/microsoft-logo-8EE94BD68A-seeklogo.com.png" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            MICROSOFT
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi MICROSOFT.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/microsoft.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book laravel -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJIZSV6WytXnbqL37Z7iDhoi8kwsxPd28QQw&s"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            LARAVEL
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi LARAVEL.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/laravel.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book kalkulus -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://i1.wp.com/himti.budiluhur.ac.id/wp-content/uploads/2019/10/calculus.jpg?resize=1024%2C640"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            KALKULUS
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi KALKULUS.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/kalkulus.html">
+            Review Book
+          </a>
+        </div>
+        <!-- book c# -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            C#
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi C#.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/cpagar.html">
+            Review Book
+          </a>
+        </div>
+        <!-- server -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://cdn.dribbble.com/users/1261007/screenshots/6557375/server.png?resize=400x0" width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            SERVER
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi SERVER.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/server.html">
+            Review Book
+          </a>
+        </div>
+        <!-- cyber -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7fkRF057eqXYTsGCOBPGzwECVdD1ObYyQrrMaRRPkYEl_9wOOi2Q6wSnQ3lMgxeT2Ec&usqp=CAU"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            CYBER SECURITY
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi CYBER SECURITY.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/cyber.html">
+            Review Book
+          </a>
+        </div>
+        <!-- ios -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://static.vecteezy.com/system/resources/previews/021/496/368/non_2x/ios-icon-logo-software-phone-apple-symbol-with-name-black-design-mobile-illustration-free-vector.jpg"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            IOS
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi IOS.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/ios.html">
+            Review Book
+          </a>
+        </div>
+        <!-- microt -->
+        <div class="bg-gray-800 p-4 rounded">
+          <img alt="E-Book 10" class="mb-4 rounded"
+            src="https://www.comms-express.com/assets/images/1637596966Cloud%20Hosted%20Router%20License.jpg"
+            width="500" />
+          <h3 class="text-xl font-bold mb-2">
+            MIKROTIK
+          </h3>
+          <p class="text-lg mb-4">
+            E-book Materi MIKROTIK.
+          </p>
+          <a class="bg-blue-600 px-4 py-2 rounded" href="book-programmer/mikrotik.html">
+            Review Book
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-gray-800 py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl font-bold">
+          MyBook
+        </div>
+        <!-- <div class="space-x-4">
+       <a class="text-white" href="#">
+        Tutorial Programming
+       </a>
+       <a class="text-white" href="#">
+        Pembuatan Aplikasi &amp; Web
+       </a>
+       <a class="text-white" href="#">
+        Trik
+       </a>
+       <a class="text-white" href="#">
+        Youtube
+       </a>
+      </div> -->
+        <div class="space-x-4">
+          <a class="text-white" href="https://www.tiktok.com/@danzpakezklpakesdingin?_t=8rlq7EHdn1k&_r=1">
+            Tiktok
+        </a>
+        <a class="text-white" href="https://youtube.com/@wildan.farhany.r5829?si=27HtxrjY9Ym3ouTS">
+            Youtube
+        </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('menu-button').addEventListener('click', function () {
+      var menu = document.getElementById('mobile-menu');
+      if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>

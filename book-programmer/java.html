@@ -1,0 +1,223 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   E-Books - Ruang Coding
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <img src="../logo.jpg" alt="" width="50" height="50" class="rounded-full">
+            <div class="text-2xl font-bold">
+                MyBook
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+            </nav>
+            <!-- <div class="hidden md:flex items-center space-x-4">
+                <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button>
+            </div> -->
+            <button class="md:hidden text-white" id="menu-button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <nav class="flex flex-col space-y-4 px-4 py-2">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+                <!-- <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button> -->
+            </nav>
+        </div>
+    </header>
+  <main class="container mx-auto px-4 py-8">
+   <section class="text-center mb-12">
+    <h1 class="text-4xl font-bold mb-4">
+     E-Books Materi JAVA
+    </h1>
+    <p class="text-lg mb-4">
+     Tempat dimana teman-teman dapat belajar gratis dengan membaca e-book yang telah kami sediakan.
+    </p>
+   </section>
+   <section class="mb-12">
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Java Progamming on Linux</p>
+            <a href="https://drive.google.com/file/d/14Puh1g3mNsSkI4gAD7OdBtYKOrr-PL8K/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Modul JavaScript pada Form Html</p>
+            <a href="https://drive.google.com/file/d/1Cgf3q4uR-VRk-ChLAsb6TWbzu-v2cvw4/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">BAB IV - JavaScript</p>
+            <a href="https://drive.google.com/file/d/1Vr0e2RS3XcK-JDgIQBI9DyencCAAntCy/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Fullstack JavaScript Development With Mean</p>
+            <a href="https://drive.google.com/file/d/1Hn_-vQyKjqkz9W86D8IE3oAYCJQdtZqN/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Fundamental Of java Programming</p>
+            <a href="https://drive.google.com/file/d/1zK8neij1ElyKLgcu5zIrVhtRZI3TR8r1/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Java 2 Bible</p>
+            <a href="https://drive.google.com/file/d/1iSSvtnKwBlxtTz03dw2IZYC5i8OwKf34/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Java tutorial</p>
+            <a href="https://drive.google.com/file/d/1X1WH1AaSv7rfbiDm_YtPi2iqXN3qulB5/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">JavaScript Cheat Sheet</p>
+            <a href="https://drive.google.com/file/d/1A9FOMcqjltdGV2gkpzFmUl7x_ttekpUw/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">JavaScript Programming</p>
+            <a href="https://drive.google.com/file/d/1CmbVFpF0ECer8emdZO1uM5V-axwX-n2G/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">JavaScript Tutorial</p>
+            <a href="https://drive.google.com/file/d/1R7vOwizg-Lx-imtypqwbm5zyIZMWNFnM/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">JavaScript Notes For Professionals</p>
+            <a href="https://drive.google.com/file/d/1Sg9wKtKE8P9FoDRbyKZYZdGKtS2dCWso/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Modul 1 Dasar pemograman java</p>
+            <a href="https://drive.google.com/file/d/1qFeyplGiU8C3gDesJXJr8a4tEQHLSr7l/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Modul Dasar Pemograman Java</p>
+            <a href="https://drive.google.com/file/d/1Wvo8xI9qRYhV65ARlu46BR7TElwtxdaJ/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Modul Lengkap JavaScript</p>
+            <a href="https://drive.google.com/file/d/1Wyhwr0U3iX7wa9uuZbLfD8-bwK3KUig2/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Pengenalan Riect Js</p>
+            <a href="https://drive.google.com/file/d/1jDgqDX69R-QqCEYCflnXfc4aKaZThWEs/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">Think in Java, 4 th Edition</p>
+            <a href="https://drive.google.com/file/d/1y8xGHultO61ODU1mTZN23zk_ns_JxOE8/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+        <div class="bg-gray-800 p-4 rounded">
+            <img src="https://hermes.dio.me/articles/cover/7b138e6f-b295-45e7-9670-ad12d8f00ea0.png" alt="Review 2 untuk Book 2">
+            <p class="text-lg mb-4">w3 Javascript</p>
+            <a href="https://drive.google.com/file/d/1oLW0LvtB0Kf56cS6S1wmORoqeQbs-JD_/view?usp=drive_link"
+                class="bg-blue-600 px-4 py-2 rounded" target="_blank">Open File</a>
+        </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gray-800 py-8">
+    <div class="container mx-auto px-4">
+     <div class="flex justify-between items-center">
+      <div class="text-2xl font-bold">
+       MyBook
+      </div>
+      <!-- <div class="space-x-4">
+       <a class="text-white" href="#">
+        Tutorial Programming
+       </a>
+       <a class="text-white" href="#">
+        Pembuatan Aplikasi &amp; Web
+       </a>
+       <a class="text-white" href="#">
+        Trik
+       </a>
+       <a class="text-white" href="#">
+        Youtube
+       </a>
+      </div> -->
+      <div class="space-x-4">
+       <a class="text-white" href="#">
+        Instagram
+       </a>
+       <a class="text-white" href="#">
+        Whatsapp
+       </a>
+      </div>
+     </div>
+    </div>
+   </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    });
+  </script>
+ </body>
+</html>

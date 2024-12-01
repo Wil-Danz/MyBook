@@ -1,0 +1,383 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Tutorial Webify
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <img src="../logo.jpg" alt="" width="50" height="50" class="rounded-full">
+            <div class="text-2xl font-bold">
+                MyBook
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+            </nav>
+            <!-- <div class="hidden md:flex items-center space-x-4">
+                <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button>
+            </div> -->
+            <button class="md:hidden text-white" id="menu-button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <nav class="flex flex-col space-y-4 px-4 py-2">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+                <!-- <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button> -->
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center mb-12 bg-cover bg-center py-20"
+            style="background-image: url('https://media.istockphoto.com/id/930480038/video/programming-code-abstract-technology-background-footage.jpg?s=640x640&k=20&c=M8d3z5hSlADutd5wrfXZTQRoWtzV_BRz-bGqNKwGJ-g=');">
+            <h1 class="lg:text-6xl text-4xl font-bold mb-4">
+                Kumpulan E-book &amp; Tutorial Pemograman.
+            </h1>
+            <p class="text-lg mb-4">
+                Tempat untuk belajar &amp; menemukan ilmu yang bermanfaat dalam sebuah E-book dan Video.
+            </p>
+            <button class="bg-blue-600 px-6 py-2 rounded">
+                Pelajari Sekarang
+            </button>
+        </section>
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">
+                Kategori Video Tutorial
+            </h2>
+            <!-- html -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial HTML
+                    </h3>
+                    <a href="video/video_html.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- css -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial CSS
+                    </h3>
+                    <a href="video/video_css.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- js -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial JavaScript
+                    </h3>
+                    <a href="video/video_javascript.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- java -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial JAVA
+                    </h3>
+                    <a href="video/video_java.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- kotlin -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Kotlin
+                    </h3>
+                    <a href="video/video_kotlin.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- c# -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial C#
+                    </h3>
+                    <a href="video/video_cpagar.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- c++ -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial C++
+                    </h3>
+                    <a href="video/video_c++.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- php -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial PHP
+                    </h3>
+                    <a href="video/video_php.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- api -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial API
+                    </h3>
+                    <a href="video/video_api.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- git hub -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Git & Github
+                    </h3>
+                    <a href="video/video_git.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- flexbox -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Flex BoX
+                    </h3>
+                    <a href="video/video_flexbox.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- tailwind -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Tailwind CSS
+                    </h3>
+                    <a href="video/video_tailwindcss.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- lavarel -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Laravel
+                    </h3>
+                    <a href="video/video_laravel.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- figma -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Figma
+                    </h3>
+                    <a href="video/video_figma.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- appshet -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial AppSheet
+                    </h3>
+                    <a href="video/video_appsheet.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- sheet -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Google Sheet
+                    </h3>
+                    <a href="video/video_googlesheet.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- arduino -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial Arduino
+                    </h3>
+                    <a href="video/video_arduino.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+                <!-- wp -->
+                <div class="bg-gray-800 p-4 rounded ">
+                    <img alt="Tutorial 1" class="mb-4 rounded" height="200"
+                        src="https://t4.ftcdn.net/jpg/04/79/68/11/360_F_479681197_7mMLB4x5zFw5NmvgWU06QeAbINIXsfbN.jpg"
+                        width="500" />
+                    <h3 class="text-2xl font-bold mb-2">
+                        Kumpulan Video Tutorial WordPress
+                    </h3>
+                    <a href="video/video_wordpress.html">
+                        <button class="bg-blue-600 px-4 py-2 rounded">
+                            Pelajari
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4">
+         <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold">
+           MyBook
+          </div>
+          <!-- <div class="space-x-4">
+           <a class="text-white" href="#">
+            Tutorial Programming
+           </a>
+           <a class="text-white" href="#">
+            Pembuatan Aplikasi &amp; Web
+           </a>
+           <a class="text-white" href="#">
+            Trik
+           </a>
+           <a class="text-white" href="#">
+            Youtube
+           </a>
+          </div> -->
+          <div class="space-x-4">
+           <a class="text-white" href="#">
+            Instagram
+           </a>
+           <a class="text-white" href="#">
+            Whatsapp
+           </a>
+          </div>
+         </div>
+        </div>
+       </footer>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

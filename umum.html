@@ -1,0 +1,152 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        E-Books - Webify
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <img src="../logo.jpg" alt="" width="50" height="50" class="rounded-full">
+            <div class="text-2xl font-bold">
+                MyBook
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+            </nav>
+            <!-- <div class="hidden md:flex items-center space-x-4">
+                <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button>
+            </div> -->
+            <button class="md:hidden text-white" id="menu-button">
+                <i class="fas fa-bars">
+                </i>
+            </button>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <nav class="flex flex-col space-y-4 px-4 py-2">
+                <a class="text-white" href="../index.html">
+                    Home
+                </a>
+                <a class="text-white" href="../tutorial.html">
+                    Tutorial
+                </a>
+                <a class="text-white" href="../profile.html">
+                    Profile
+                </a>
+                <!-- <input class="px-2 py-1 rounded bg-gray-700 text-white" placeholder="Search..." type="text" />
+                <button class="bg-blue-600 px-4 py-2 rounded">
+                    Login
+                </button> -->
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">
+                Kumpulan E-book Umum
+            </h1>
+            <p class="text-lg mb-4">
+                Tempat dimana teman-teman dapat belajar gratis dengan membaca e-book yang telah kami sediakan.
+            </p>
+        </section>
+        <section class="mb-12">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="bg-gray-800 p-4 rounded">
+                    <img alt="E-Book 1" class="mb-4 rounded" height="200"
+                        src="https://media.lordicon.com/icons/wired/lineal/2426-number-10.svg"
+                        width="300" />
+                    <h3 class="text-xl font-bold mb-2">
+                         Buku Kelas 10
+                    </h3>
+                    <p class="text-lg mb-4">
+                        Kumpulan Materi kelas 10
+                    </p>
+                    <a class="bg-blue-600 px-4 py-2 rounded" href="book-umum/kelas10.html">
+                        review buku
+                    </a>
+                </div>
+                <div class="bg-gray-800 p-4 rounded">
+                    <img alt="E-Book 2" class="mb-4 rounded" height="200"
+                        src="https://cdn-icons-png.flaticon.com/512/9928/9928803.png"
+                        width="300" />
+                    <h3 class="text-xl font-bold mb-2">
+                         Buku Kelas 11
+                    </h3>
+                    <p class="text-lg mb-4">
+                        Kumpulan Materi kelas 11
+                    </p>
+                    <a class="bg-blue-600 px-4 py-2 rounded" href="book-umum/kelas11.html">
+                        review buku
+                    </a>
+                </div>
+                <div class="bg-gray-800 p-4 rounded">
+                    <img alt="E-Book 3" class="mb-4 rounded" height="200"
+                        src="https://cdn-icons-png.flaticon.com/512/9929/9929035.png"
+                        width="300" />
+                    <h3 class="text-xl font-bold mb-2">
+                         Buku Kelas 12
+                    </h3>
+                    <p class="text-lg mb-4">
+                        Kumpulan Materi kelas 12
+                    </p>
+                    <a class="bg-blue-600 px-4 py-2 rounded" href="book-umum/kelas12.html">
+                        review buku
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+   <footer class="bg-gray-800 py-8 fixed bottom-0 left-0 right-0">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                MyBook
+            </div>
+            <div class="space-x-4">
+                <a class="text-white" href="https://www.tiktok.com/@danzpakezklpakesdingin?_t=8rlq7EHdn1k&_r=1">
+                    Tiktok
+                </a>
+                <a class="text-white" href="https://youtube.com/@wildan.farhany.r5829?si=27HtxrjY9Ym3ouTS">
+                    Youtube
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
